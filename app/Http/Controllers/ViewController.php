@@ -3,10 +3,14 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Models\Projet;
 
 class ViewController extends Controller
 {
     function setpeinture(){
-        return view('setpeinture');
+        $projet = Projet::first();
+
+        return view('setpeinture', [
+           'projet' => $projet]);
     }
 }

@@ -11,7 +11,7 @@
 </head>
 <body>
 
-<a class="modal-trigger" href="#modal"><img src="img/tableau/default/kebab.png"></a>
+<a class="modal-trigger" href="#modal"><img src="{{ $projet['kebab_chemin'] }}"></a>
 
 <script>
 
