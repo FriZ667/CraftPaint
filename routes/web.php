@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\ProfileController;
+use App\Http\Controllers\ViewController;
 
 Route::get('/', function () {
     return view('index');
@@ -13,4 +14,5 @@ Route::middleware('auth')->group(function () {
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
 });
 
+Route::get('/accueil', [ViewController::class, 'index'])->name('accueil');
 require __DIR__.'/auth.php';
