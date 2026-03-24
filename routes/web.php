@@ -15,4 +15,5 @@ Route::middleware('auth')->group(function () {
 });
 
 Route::get('/accueil', [ViewController::class, 'index'])->name('accueil');
+Route::get('/formulaire/create', [ViewController::class, 'creation_pack'])->name('formulaires.creationpack');
 require __DIR__.'/auth.php';

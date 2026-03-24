@@ -10,4 +10,9 @@ class ViewController extends Controller
     {
         return view('index');
     }
+
+    public function creation_pack()
+    {
+        return view('formulaires.creationpack');
+    }
 }
