@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Models\Version;
 
 class ViewController extends Controller
 {
@@ -13,6 +14,7 @@ class ViewController extends Controller
 
     public function creation_pack()
     {
-        return view('formulaires.creationpack');
+        $version = Version::all();
+        return view('formulaires.creationpack', compact('version'));
     }
 }

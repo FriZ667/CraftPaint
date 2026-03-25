@@ -7,9 +7,9 @@
         <div class="form-group">
             <label>Choisisez la version pour laquel vous voulez créer votre pack</label>
             <select required>
-                <option>1.8.8</option>
-                <option>1.12.2</option>
-                <option>1.16.5</option>
+                @foreach ($version as $v)
+                    <option>{{ $v->version }}</option>
+                @endforeach
             </select>
         </div>
         <div class="form-group">
